@@ -30,7 +30,13 @@ Otogiri::Plugin::TengPluginBridge - Load Teng plugin into Otogiri
 
 =head1 SYNOPSIS
 
+    use Otogiri;
+    use Otogiri::Plugin;
     use Otogiri::Plugin::TengPluginBridge;
+
+    my $db = Otogiri->new( connect_info => ... );
+    $db->load_plugin('TengPluginBridge');
+    $db->load_teng_plugin('SomePlugin'); # Loads Teng::Plugin::SomePlugin
 
 =head1 DESCRIPTION
 
